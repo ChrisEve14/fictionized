@@ -1,0 +1,120 @@
+//HTML DE HOME//
+
+.mainIndex {
+    margin: 5px;
+    padding: 15px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h3 h3"
+        "app p"
+        "store store";
+
+    h3 {
+        color: $color;
+        grid-area: h3;
+        margin: 5px;
+        padding: 5px;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+
+    div {
+        .app {
+            padding: 15px;
+            margin: 5px;
+            width: 700px;
+            grid-area: app;
+        }
+
+        .scale {
+            transition: all 3s ease;
+        }
+
+        .scale:hover {
+            transform: scale(1.1);
+        }
+    }
+
+
+    div {
+        p {
+            padding: 15px;
+            margin: 5px;
+            font-size: 33.5px;
+            color: $color;
+            font-family: 'Dosis', sans-serif;
+            font-weight: bold;
+            font-style: italic;
+            text-align: justify;
+            line-height: 1.6;
+            grid-area: p;
+        }
+    }
+
+
+    div {
+        .store {
+            width: 200px;
+            padding: 15px;
+            margin: 5px;
+            grid-area: store;
+        }
+    }
+}
+
+//Media Query Index//
+
+@media screen and (max-width: 1215px) {
+    .mainIndex {
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "h3"
+            "app"
+            "p"
+            "store";
+    }
+}
+
+@media screen and(max-width: 600px) {
+    .mainIndex {
+        h3 {
+            font-size: 30px;
+        }
+
+        div {
+            .app {
+                width: 500px;
+                height: auto;
+            }
+        }
+
+        div {
+            p {
+                font-size: 24px;
+            }
+        }
+
+        div {
+            .store {
+                width: 150px;
+                height: auto;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 415px) {
+    .mainIndex {
+        div {
+            .app {
+                width: 350px;
+            }
+        }
+    }
+
+}

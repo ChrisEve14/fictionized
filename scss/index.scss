@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "variables/variables";
+
+.body {
+    margin: 30px;
+    padding: 10px;
+    background-color: black;
+}
+
+//HTML DE INDEX//
+@import "secciones/header";
+
+@import "secciones/mainIndex";
+
+@import "secciones/footer";
+
+
+//HTML DE ABOUT//
+@import "secciones/mainAbout";
+
+
+//HTML DE CONTACT//
+@import "secciones/mainContact";

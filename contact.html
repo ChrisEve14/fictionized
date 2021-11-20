@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bonheur+Royale&family=Dosis:wght@200&display=swap"
+        rel="stylesheet">
+    <meta name="description" content="Fictionized App Contact Page">
+    <meta name="keywords" content="Fictionized, App, Write, Read, Role-play, contact">
+    <title> Fictionized Contact Form</title>
+    <link rel="icon" href="icons/favicon-32x32.png" type="image/ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body">
+    <header>
+        <h1> <img class="banner" src="images/FictionizedBanner.jpg" alt="Imagen del banner Fictionized"></h1>
+        <section>
+            <nav>
+                <a href="index.html"> <img class="logo" src="images/FictionizedF.jpg" alt="Logo de la letra F"> </a>
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="about.html">About Us</a></li>
+                    <li> <a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+    </header>
+
+    <main class="mainContact">
+        <h2 class="contactUs">Contact Us</h2>
+        <section class="contactForm">
+            <div>
+                <form class="form" action="#">
+                    <fieldset>
+                        <br>
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" placeholder="Evannie">
+                            <br> <br>
+                            <label for="last name">Last Name</label>
+                            <input type="text" name="last name" placeholder="Brendan">
+                            <br> <br>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" required>
+                            <br> <br>
+                        </div>
+                        <div>
+                            <label for="country">Country</label>
+                            <select name="country" id="">
+                                <option value="usa">USA</option>
+                                <option value="uk">UK</option>
+                                <option value="canada">Canada</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <br> <br>
+                        </div>
+                        <div>
+                            <label for="sex">Gender</label>
+                            <input type="radio" name="sex" value="female">Female
+                            <input type="radio" name="sex" value="male">Male
+                            <br> <br>
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password">
+                            <br> <br>
+                        </div>
+                        <div>
+                            <label for="birthdate">Birthdate</label>
+                            <input type="date" name="birthdate">
+                            <br> <br>
+                        </div>
+                        <div>
+                            <label for="comments" name="comments">Comments</label> <br>
+                            <textarea name="comments" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="terms">I agree to terms</label>
+                            <input type="checkbox" name="terms" required>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="submit" value=Submit>
+                            <input type="reset" value=Reset>
+                        </div>
+                        <br>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="smartmockup">
+                <img class="contactImg" src="images/Fictionizedmockup.png" alt="imagen mockup de la app Fictionized">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <hr>
+        <h4 class="findUs">Find us here</h4>
+        <div class="iconDiv">
+            <a href="https://www.instagram.com/thebookhavencafe/" target="_blank"> <img class="icon"
+                    src="icons/Instagram2.png" alt="Instagram"></a>
+            <a href="https://www.wattpad.com/user/EvannieBrendan" target="_blank"> <img class="icon"
+                    src="icons/Wattpad2.png" alt="Wattpad"></a>
+            <a href="https://evanniebrendan.wixsite.com/fictionized" target="_blank"> <img class="icon"
+                    src="icons/F.png" alt="Fictionized"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

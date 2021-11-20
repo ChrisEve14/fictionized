@@ -1,0 +1,107 @@
+//HTML DE CONTACT//
+
+.mainContact {
+    .contactUs {
+        color: $color;
+        padding: 10px;
+        margin: 10px;
+        text-transform: uppercase;
+        font-family: 'Dosis', sans-serif;
+        font-size: 30px;
+    }
+
+    .contactForm {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr, 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "form smartmockup";
+
+        .form {
+            font-family: 'Dosis', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: $color;
+            grid-area: form;
+
+
+            fieldset {
+                padding: 10px;
+                margin: 10px;
+                width: 100%;
+                border: double;
+                background-color: black;
+                font-family: 'Dosis', sans-serif;
+                font-size: 20px;
+                color: $color;
+            }
+        }
+
+        .smartmockup {
+            display: grid;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+            grid-area: smartmockup;
+
+            .contactImg {
+                padding: 15px;
+                margin: 15px;
+                width: 980px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .mainContact {
+        .smartmockup {
+            .contactImg {
+                width: 750px;
+                height: auto;
+
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1215px) {
+    .mainContact {
+        .contactForm {
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            grid-template-areas: "form"
+                "smartmockup";
+
+            .smartmockup {
+                .contactImg {
+                    width: 500px;
+                    height: auto;
+                }
+            }
+
+        }
+
+
+    }
+
+}
+
+@media screen and (max-width: 415px) {
+    .mainContact {
+        .contactForm {
+            div {
+                width: 8cm;
+            }
+
+            .smartmockup {
+                .contactImg {
+                    width: 365px;
+                    margin-left: 1cm;
+                }
+            }
+        }
+    }
+}

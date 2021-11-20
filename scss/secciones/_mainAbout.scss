@@ -1,0 +1,145 @@
+//HTML DE ABOUT//
+
+@mixin parrafo ($grid) {
+    grid-area: $grid;
+    padding: 20px;
+
+    p {
+        color: $color;
+        font-size: 27px;
+        font-family: 'Dosis', sans-serif;
+        text-align: center;
+        font-style: italic;
+        line-height: 1.6;
+        font-weight: bold;
+    }
+}
+
+.sectionAbout {
+    padding: 15px;
+    margin: 10px;
+
+    .parent {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        grid-template-areas: "text1 text1"
+            "image1 text2"
+            "text3 image2"
+            "text4 text4";
+
+    }
+
+    .text1 {
+        @include parrafo (text1);
+        align-self: center;
+
+    }
+
+    .text2 {
+        @include parrafo (text2)
+    }
+
+    .text3 {
+        @include parrafo (text3)
+    }
+
+    .text4 {
+        @include parrafo (text4)
+    }
+
+    .image1 {
+        grid-area: image1;
+
+        img {
+            padding: 15px;
+            margin: 15px;
+            width: 600px;
+            border: $color solid 3px;
+        }
+    }
+
+    .image2 {
+        grid-area: image2;
+
+        img {
+            padding: 15px;
+            margin: 15px;
+            width: 600px;
+            border: $color solid 3px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1250px) {
+    .sectionAbout {
+        .parent {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "text1"
+                "text2"
+                "image1"
+                "text3"
+                "image2"
+                "text4";
+        }
+    }
+}
+
+@media screen and(max-width: 650px) {
+    .sectionAbout {
+        .parent {
+            .image1 {
+                img {
+                    width: 400px;
+                    height: auto;
+                }
+            }
+
+            .image2 {
+                img {
+                    width: 400px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    @mixin parrafo ($grid) {
+        grid-area: $grid;
+        padding: 10px;
+
+        p {
+            color: $color;
+            font-size: 15px;
+            font-family: 'Dosis', sans-serif;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.6;
+            font-weight: bold;
+        }
+    }
+
+    .sectionAbout {
+        .parent {
+            .image1 {
+                img {
+                    width: 330px;
+                    height: auto;
+                }
+            }
+
+            .image2 {
+                img {
+                    width: 330px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.body {
+  margin: 30px;
+  padding: 10px;
+  background-color: black;
+}
+
+header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 .banner {
+  width: 700px;
+  height: 400px;
+}
+
+header section nav {
+  padding: 10px;
+}
+
+header section nav .logo {
+  position: absolute;
+  padding: 10px;
+  width: 55px;
+}
+
+header section nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-family: 'Dosis', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header section nav ul a {
+  color: mintcream;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+header section nav ul a:hover {
+  background-color: rgba(255, 255, 255, 0.89);
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+header section hr {
+  border: 0 none mintcream;
+  border-top: 1px solid mintcream;
+  height: 1px;
+  margin: 5px 0;
+  display: block;
+  clear: both;
+}
+
+@media screen and (max-width: 800px) {
+  header h1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header h1 .banner {
+    height: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  section nav .logo {
+    display: none;
+  }
+  section nav ul {
+    display: flex-wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header h1 .banner {
+    width: 500px;
+  }
+  header section nav ul {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  header h1 .banner {
+    width: 400px;
+  }
+}
+
+.mainIndex {
+  margin: 5px;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "h3 h3" "app p" "store store";
+}
+
+.mainIndex h3 {
+  color: mintcream;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: h3;
+  margin: 5px;
+  padding: 5px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.mainIndex div .app {
+  padding: 15px;
+  margin: 5px;
+  width: 700px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: app;
+}
+
+.mainIndex div .scale {
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+}
+
+.mainIndex div .scale:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.mainIndex div p {
+  padding: 15px;
+  margin: 5px;
+  font-size: 33.5px;
+  color: mintcream;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  text-align: justify;
+  line-height: 1.6;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: p;
+}
+
+.mainIndex div .store {
+  width: 200px;
+  padding: 15px;
+  margin: 5px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: store;
+}
+
+@media screen and (max-width: 1215px) {
+  .mainIndex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "h3" "app" "p" "store";
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mainIndex h3 {
+    font-size: 30px;
+  }
+  .mainIndex div .app {
+    width: 500px;
+    height: auto;
+  }
+  .mainIndex div p {
+    font-size: 24px;
+  }
+  .mainIndex div .store {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .mainIndex div .app {
+    width: 350px;
+  }
+}
+
+.footer {
+  text-align: right;
+  line-height: 1.6;
+  padding: 10px;
+  margin: 10px;
+}
+
+.footer hr {
+  border: 0 none mintcream;
+  border-top: 1px solid mintcream;
+  height: 1px;
+  margin: 5px 0;
+  display: block;
+  clear: both;
+}
+
+.footer .findUs {
+  line-height: 1.6;
+  padding: 5px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 25px;
+  color: mintcream;
+}
+
+.footer .iconDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer .iconDiv .icon {
+  padding: 5px;
+  margin: 5px;
+  width: 33px;
+}
+
+.sectionAbout {
+  padding: 15px;
+  margin: 10px;
+}
+
+.sectionAbout .parent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      grid-template-areas: "text1 text1" "image1 text2" "text3 image2" "text4 text4";
+}
+
+.sectionAbout .text1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text1;
+  padding: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.sectionAbout .text1 p {
+  color: mintcream;
+  font-size: 27px;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.sectionAbout .text2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: text2;
+  padding: 20px;
+}
+
+.sectionAbout .text2 p {
+  color: mintcream;
+  font-size: 27px;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.sectionAbout .text3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: text3;
+  padding: 20px;
+}
+
+.sectionAbout .text3 p {
+  color: mintcream;
+  font-size: 27px;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.sectionAbout .text4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text4;
+  padding: 20px;
+}
+
+.sectionAbout .text4 p {
+  color: mintcream;
+  font-size: 27px;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.sectionAbout .image1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: image1;
+}
+
+.sectionAbout .image1 img {
+  padding: 15px;
+  margin: 15px;
+  width: 600px;
+  border: mintcream solid 3px;
+}
+
+.sectionAbout .image2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: image2;
+}
+
+.sectionAbout .image2 img {
+  padding: 15px;
+  margin: 15px;
+  width: 600px;
+  border: mintcream solid 3px;
+}
+
+@media screen and (max-width: 1250px) {
+  .sectionAbout .parent {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "text1" "text2" "image1" "text3" "image2" "text4";
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .sectionAbout .parent .image1 img {
+    width: 400px;
+    height: auto;
+  }
+  .sectionAbout .parent .image2 img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .sectionAbout .parent .image1 img {
+    width: 330px;
+    height: auto;
+  }
+  .sectionAbout .parent .image2 img {
+    width: 330px;
+    height: auto;
+  }
+}
+
+.mainContact .contactUs {
+  color: mintcream;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+}
+
+.mainContact .contactForm {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "form smartmockup";
+}
+
+.mainContact .contactForm .form {
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: mintcream;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: form;
+}
+
+.mainContact .contactForm .form fieldset {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  border: double;
+  background-color: black;
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  color: mintcream;
+}
+
+.mainContact .contactForm .smartmockup {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: smartmockup;
+}
+
+.mainContact .contactForm .smartmockup .contactImg {
+  padding: 15px;
+  margin: 15px;
+  width: 980px;
+}
+
+@media screen and (max-width: 1500px) {
+  .mainContact .smartmockup .contactImg {
+    width: 750px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .mainContact .contactForm {
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "form" "smartmockup";
+  }
+  .mainContact .contactForm .smartmockup .contactImg {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .mainContact .contactForm div {
+    width: 8cm;
+  }
+  .mainContact .contactForm .smartmockup .contactImg {
+    width: 365px;
+    margin-left: 1cm;
+  }
+}

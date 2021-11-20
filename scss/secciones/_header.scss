@@ -1,0 +1,120 @@
+header {
+    h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .banner {
+            width: 700px;
+            height: 400px;
+        }
+    }
+
+    section {
+        nav {
+            padding: 10px;
+
+            .logo {
+                position: absolute;
+                padding: 10px;
+                width: 55px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                font-size: 30px;
+                font-family: 'Dosis', sans-serif;
+                display: flex;
+                justify-content: space-evenly;
+
+                a {
+                    color: $color;
+                    text-decoration: none;
+                    padding: 10px;
+                    display: block;
+                }
+
+                a:hover {
+                    background-color: rgba(255, 255, 255, 0.89);
+                    color: black;
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        hr {
+            border: 0 none $color;
+            border-top: 1px solid $color;
+            height: 1px;
+            margin: 5px 0;
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    header {
+        h1 {
+            flex-direction: column;
+
+            .banner {
+                height: auto;
+                align-self: center;
+            }
+
+        }
+    }
+
+    section {
+        nav {
+            .logo {
+                display: none;
+
+            }
+
+            ul {
+                display: flex-wrap;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        h1 {
+            .banner {
+                width: 500px;
+
+            }
+
+        }
+
+        section {
+            nav {
+                ul {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 415px) {
+    header {
+        h1 {
+            .banner {
+                width: 400px;
+            }
+        }
+    }
+}
