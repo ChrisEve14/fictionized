@@ -502,12 +502,6 @@ header section hr {
   }
 }
 
-@media screen and (max-width: 650px) {
-  .mainContact .contactForm div {
-    width: 10cm;
-  }
-}
-
 @media screen and (max-width: 415px) {
   .mainContact .contactForm div {
     width: 8cm;
