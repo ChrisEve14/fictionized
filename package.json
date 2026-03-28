@@ -5,12 +5,12 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^6.0.1",
+    "sass": "^1.69.0",
     "nodemon": "^2.0.14"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/index.scss css/index.css",
+    "build-css": "sass scss/index.scss css/index.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "",
